@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Elijah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-row">
+    <a class="logo" href="index.html">ELIJAH<span>.dev</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="stack.html">Stack</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap hero compact">
+    <p class="hero-tag">FIG. 01–03</p>
+    <h1 class="hero-title">Selected work.</h1>
+    <p class="hero-desc">Three systems, each built for a real business rather than a hypothetical one.</p>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="project panel reveal" data-gallery="pharmacy-pos">
+        <div class="project-top">
+          <h3 class="project-name">Pharmacy POS — MediTrack</h3>
+          <span class="project-status">deployed</span>
+        </div>
+        <p class="project-meta">Flask · SQLite · Windows deployment</p>
+        <p class="project-desc">A point-of-sale system built for a working pharmacy, designed around Philippine retail rules rather than a generic checkout flow.</p>
+        <ul class="spec-grid">
+          <li>BIR-compliant sequential Official Receipt numbering</li>
+          <li>Senior citizen &amp; PWD discounts (RA 9994, RA 10754)</li>
+          <li>TOTP two-factor login, replacing a math CAPTCHA</li>
+          <li>USB thermal printing on a YICHIP POS58</li>
+          <li>HMAC-SHA256 chained audit ledger</li>
+          <li>Scheduled dual-location backups</li>
+        </ul>
+        <button class="view-shots" type="button">View screenshots →</button>
+      </div>
+
+      <div class="project panel reveal" data-gallery="hardware-pos" style="margin-top:28px;">
+        <div class="project-top">
+          <h3 class="project-name">Hardware POS</h3>
+          <span class="project-status amber">in progress</span>
+        </div>
+        <p class="project-meta">Flask · SQLite · role-based auth</p>
+        <p class="project-desc">A hardware store system pairing full inventory control with a working POS terminal.</p>
+        <ul class="spec-grid">
+          <li>Role-based authentication for staff and admin</li>
+          <li>Warranty tracking and supplier/customer management</li>
+          <li>Six report types with Excel export</li>
+        </ul>
+        <button class="view-shots" type="button">View screenshots →</button>
+      </div>
+
+      <div class="project panel reveal" data-gallery="dulcis-pos" style="margin-top:28px;">
+        <div class="project-top">
+          <h3 class="project-name">Dulcis POS</h3>
+          <span class="project-status">Deployed Capstone</span>
+        </div>
+        <p class="project-meta">Flask · SQLite · role-based auth</p>
+        <p class="project-desc"> A Cafe POS system built for a small business, with a focus on secuiruty and reliability.</p>
+        </p>
+        <ul class="spec-grid">
+          <li>Role based authentication for staff and admmin</li>
+          <li>USB thermal printing on a YICHIP POS58</li>
+          <li>Built with a cross-disciplinary capstone team</li>
+        </ul>
+        <button class="view-shots" type="button">View screenshots →</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project screenshots">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-body">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <p class="lightbox-title" id="lightboxTitle"></p>
+    <div class="lightbox-frame">
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+      <img id="lightboxImg" alt="">
+      <div class="lightbox-empty" id="lightboxEmpty">
+        <span>No screenshots added yet.</span>
+        <span class="path-hint" id="lightboxHint"></span>
+      </div>
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">›</button>
+    </div>
+    <p class="lightbox-count" id="lightboxCount"></p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Iloilo City, Philippines</p>
+    <div class="foot-links">
+      <a href="mailto:you@email.com">Email</a>
+      <a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
