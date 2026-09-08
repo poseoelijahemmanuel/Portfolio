@@ -34,12 +34,49 @@
   <section>
     <div class="wrap contact-cta reveal">
       <h2>Let's build something that has to actually work.</h2>
-      <p>The fastest way to reach me is email — happy to talk through a project, a role, or just what I've built so far.</p>
+      <p>Send a message directly and it'll land in my inbox — or reach me on GitHub / LinkedIn.</p>
       <div class="hero-links">
-        <a class="btn primary" href="mailto:you@email.com">you@email.com</a>
-        <a class="btn ghost" href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://github.com/poseoelijahemmanuel" target="_blank" rel="noopener">GitHub</a>
         <a class="btn ghost" href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0; border-top:none;">
+    <div class="wrap">
+      <form class="contact-form panel reveal" id="contactForm" action="https://formspree.io/f/meaqpjoy" method="POST">
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-name">Name<span class="req">*</span></label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email<span class="req">*</span></label>
+            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-company">Company <span class="opt">(optional)</span></label>
+            <input type="text" id="cf-company" name="company" placeholder="Company or organization">
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
+          </div>
+        </div>
+        <div class="field field-full">
+          <label for="cf-message">Message<span class="req">*</span></label>
+          <textarea id="cf-message" name="message" rows="6" placeholder="Tell me a bit about the project or role..." required></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-footer">
+          <button class="btn primary" type="submit" id="cfSubmit">Send message</button>
+          <p class="form-status" id="cfStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
     </div>
   </section>
 </main>
@@ -48,13 +85,13 @@
   <div class="wrap">
     <p>Iloilo City, Philippines</p>
     <div class="foot-links">
-      <a href="mailto:you@email.com">Email</a>
-      <a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/poseoelijahemmanuel" target="_blank" rel="noopener">GitHub</a>
       <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>
