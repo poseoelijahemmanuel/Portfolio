@@ -14,7 +14,7 @@ if (toggle && links) {
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// typewriter effect for the hero title, only when not reduced-motion
+// typewriter effect for the hero title only, not repeated on other sections
 const heroTitle = document.querySelector('.hero-title');
 if (heroTitle && !reduceMotion) {
   const original = heroTitle.innerHTML;
@@ -54,11 +54,8 @@ const revealEls = document.querySelectorAll('.reveal');
 if (reduceMotion) {
   revealEls.forEach(el => el.classList.add('in'));
 } else {
-  document.querySelectorAll('#work .project.reveal').forEach((el, i) => {
+  document.querySelectorAll('#projects .project.reveal').forEach((el, i) => {
     el.style.transitionDelay = (i * 0.1) + 's';
-  });
-  document.querySelectorAll('.jump-grid.reveal .jump-card').forEach((el, i) => {
-    el.style.transitionDelay = (i * 0.08) + 's';
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -71,4 +68,27 @@ if (reduceMotion) {
   }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 
   revealEls.forEach(el => observer.observe(el));
+}
+
+// scrollspy — highlight the nav link for the section currently in view
+const sections = document.querySelectorAll('main > section[id]');
+const navLinkByHref = new Map();
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+  navLinkByHref.set(a.getAttribute('href').slice(1), a);
+});
+
+if (sections.length && navLinkByHref.size) {
+  const setActive = (id) => {
+    navLinkByHref.forEach(a => a.classList.remove('active'));
+    const active = navLinkByHref.get(id);
+    if (active) active.classList.add('active');
+  };
+
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(s => spy.observe(s));
 }

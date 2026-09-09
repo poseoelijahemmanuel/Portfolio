@@ -12,73 +12,229 @@
 
 <nav>
   <div class="wrap nav-row">
-    <a class="logo" href="index.html">ELIJAH<span>.POSEO</span></a>
+    <a class="logo" href="#home">ELIJAH<span>.POSEO</span></a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="stack.html">Stack</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
 </nav>
 
 <main>
-  <div class="wrap hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="hero-tag">SOFTWARE DEVELOPER — ILOILO, PH</p>
-        <h1 class="hero-title">Systems that run real <span class="accent">small businesses.</span></h1>
-        <p class="hero-desc">I build point-of-sale, inventory — the kind that has to match government receipt formats, talk to real hardware, and hold up against tampering. Studying Cybersecurity at PHINMA University of Iloilo.</p>
-        <div class="hero-links">
-          <a class="btn primary" href="projects.html">Projects</a>
-          <a class="btn ghost" href="contact.html">Get in touch</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="assets/profile.jpg" alt="Portrait of Elijah"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="photo-placeholder">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg>
-          <span>ADD YOUR PHOTO</span>
-          <span class="path-hint">assets/profile.jpg</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <section>
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <h2 class="sec-title">Find your way around</h2>
-        <span class="sec-fig">FIG. 00</span>
-      </div>
-      <div class="jump-grid reveal">
-        <a class="jump-card panel" href="projects.html">
-          <span class="jump-fig">01</span>
-          <h3>Projects</h3>
-          <p>Three systems built for real pharmacies, hardware stores, and cafe owners.</p>
-        </a>
-        <a class="jump-card panel" href="stack.html">
-          <span class="jump-fig">02</span>
-          <h3>Stack</h3>
-          <p>Backend, data, security, and hardware I/O tools I reach for.</p>
-        </a>
-        <a class="jump-card panel" href="about.html">
-          <span class="jump-fig">03</span>
-          <h3>About</h3>
-          <p>Cybersecurity major — where I study, and what kind of problems I like solving.</p>
-        </a>
-        <a class="jump-card panel" href="contact.html">
-          <span class="jump-fig">04</span>
-          <h3>Contact</h3>
-          <p>Open to internships, freelance builds, and collaborations.</p>
-        </a>
+  <!-- HOME -->
+  <section id="home">
+    <div class="wrap hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-tag">SOFTWARE DEVELOPER — ILOILO, PH</p>
+          <h1 class="hero-title">Systems that run real <span class="accent">small businesses.</span></h1>
+          <p class="hero-desc">I build point-of-sale and inventory systems — the kind that has to match government receipt formats, talk to real hardware, and hold up against tampering. Studying Cybersecurity at PHINMA University of Iloilo.</p>
+          <div class="hero-links">
+            <a class="btn primary" href="#projects">Projects</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/profile.jpg" alt="Portrait of Elijah"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="photo-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+            <span>ADD YOUR PHOTO</span>
+            <span class="path-hint">assets/profile.jpg</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-title">Selected work</h2>
+        <span class="sec-fig">FIG. 01–03</span>
+      </div>
+      <p class="sec-desc reveal">Three systems, each built for a real business rather than a hypothetical one.</p>
+
+      <div class="project panel reveal" data-gallery="pharmacy-pos">
+        <div class="project-top">
+          <h3 class="project-name">Pharmacy POS — MediTrack</h3>
+          <span class="project-status">deployed</span>
+        </div>
+        <p class="project-meta">Flask · SQLite · Windows deployment</p>
+        <p class="project-desc">A point-of-sale system built for a working pharmacy, designed around Philippine retail rules rather than a generic checkout flow.</p>
+        <ul class="spec-grid">
+          <li>BIR-compliant sequential Official Receipt numbering</li>
+          <li>Senior citizen &amp; PWD discounts (RA 9994, RA 10754)</li>
+          <li>TOTP two-factor login, replacing a math CAPTCHA</li>
+          <li>USB thermal printing on a YICHIP POS58</li>
+          <li>HMAC-SHA256 chained audit ledger</li>
+          <li>Scheduled dual-location backups</li>
+        </ul>
+        <div class="project-actions">
+          <button class="view-shots" type="button">View screenshots →</button>
+          <a class="github-btn" href="https://github.com/yourhandle/pharmacy-pos-meditrack" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project panel reveal" data-gallery="hardware-pos" style="margin-top:28px;">
+        <div class="project-top">
+          <h3 class="project-name">Hardware POS</h3>
+          <span class="project-status amber">in progress</span>
+        </div>
+        <p class="project-meta">Flask · SQLite · role-based auth</p>
+        <p class="project-desc">A hardware store system pairing full inventory control with a working POS terminal.</p>
+        <ul class="spec-grid">
+          <li>Role-based authentication for staff and admin</li>
+          <li>Warranty tracking and supplier/customer management</li>
+          <li>Six report types with Excel export</li>
+        </ul>
+        <div class="project-actions">
+          <button class="view-shots" type="button">View screenshots →</button>
+          <a class="github-btn" href="https://github.com/yourhandle/hardware-inventory-pos" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="project panel reveal" data-gallery="dulcis-pos" style="margin-top:28px;">
+        <div class="project-top">
+          <h3 class="project-name">Dulcis POS</h3>
+          <span class="project-status">Deployed Capstone</span>
+        </div>
+        <p class="project-meta">Flask · SQLite · role-based auth</p>
+        <p class="project-desc">A Cafe POS system built for a small business, with a focus on security and reliability.</p>
+        <ul class="spec-grid">
+          <li>Role based authentication for staff and admin</li>
+          <li>USB thermal printing on a YICHIP POS58</li>
+          <li>Built with a cross-disciplinary capstone team</li>
+        </ul>
+        <div class="project-actions">
+          <button class="view-shots" type="button">View screenshots →</button>
+          <a class="github-btn" href="https://github.com/yourhandle/dulcis-pos" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-title">What it's built with</h2>
+        <span class="sec-fig">FIG. 04</span>
+      </div>
+      <p class="sec-desc reveal">The tools that show up across every project, from checkout screen down to the printer driver.</p>
+      <div class="stack-grid reveal">
+        <div class="stack-cell"><h3>BACKEND</h3><p>Flask</p></div>
+        <div class="stack-cell"><h3>DATA</h3><p>SQLite, MySQL</p></div>
+        <div class="stack-cell"><h3>AUTH &amp; SECURITY</h3><p>HMAC-SHA256 audit ledgers, role-based access</p></div>
+        <div class="stack-cell"><h3>HARDWARE I/O</h3><p>python-escpos, pyusb, thermal receipt printing</p></div>
+        <div class="stack-cell"><h3>REPORTING</h3><p>ReportLab, Excel export, Flask-Mail</p></div>
+        <div class="stack-cell"><h3>OPS</h3><p>Windows deployment, scheduled backups</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-title">About</h2>
+        <span class="sec-fig">FIG. 05</span>
+      </div>
+      <p class="sec-desc reveal">A little on where I study and what kind of problems I like.</p>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>I'm a Cybersecurity major at PHINMA University of Iloilo, College of Information Technology Education. Most of my work has come out of capstone projects — built with the same care as production software, because the businesses using them are real.</p>
+          <p>I like systems with sharp edges: receipt numbering that has to match a government format exactly, discount rules that have to match the law, hardware that has to talk to Python over USB. That same instinct shows up in how I build — audit ledgers that can't be tampered with, two-factor logins instead of a CAPTCHA, role-based access baked in from the start. Security isn't a layer added at the end; it's part of the spec.</p>
+        </div>
+        <div class="about-facts">
+          <div><span>Based in</span><span>Iloilo City, PH</span></div>
+          <div><span>Studying</span><span>Cybersecurity</span></div>
+          <div><span>School</span><span>PHINMA University of Iloilo</span></div>
+          <div><span>Focus</span><span>Secure POS, Inventory</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 class="sec-title">Contact</h2>
+        <span class="sec-fig">FIG. 06</span>
+      </div>
+      <p class="sec-desc reveal">Open to internships, freelance builds, and collaborations on practical software.</p>
+
+      <div class="contact-cta reveal">
+        <h2>Let's build something that has to actually work.</h2>
+        <p>Send a message directly and it'll land in my inbox — or reach me on GitHub / LinkedIn.</p>
+        <div class="hero-links">
+          <a class="btn ghost" href="https://github.com/poseoelijahemmanuel" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <form class="contact-form panel reveal" id="contactForm" action="https://formspree.io/f/meaqpjoy" method="POST" style="margin-top:44px;">
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-name">Name<span class="req">*</span></label>
+            <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email<span class="req">*</span></label>
+            <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-company">Company <span class="opt">(optional)</span></label>
+            <input type="text" id="cf-company" name="company" placeholder="Company or organization">
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?">
+          </div>
+        </div>
+        <div class="field field-full">
+          <label for="cf-message">Message<span class="req">*</span></label>
+          <textarea id="cf-message" name="message" rows="6" placeholder="Tell me a bit about the project or role..." required></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-footer">
+          <button class="btn primary" type="submit" id="cfSubmit">Send message</button>
+          <p class="form-status" id="cfStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
 </main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project screenshots">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-body">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <p class="lightbox-title" id="lightboxTitle"></p>
+    <div class="lightbox-frame">
+      <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+      <img id="lightboxImg" alt="">
+      <div class="lightbox-empty" id="lightboxEmpty">
+        <span>No screenshots added yet.</span>
+        <span class="path-hint" id="lightboxHint"></span>
+      </div>
+      <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">›</button>
+    </div>
+    <p class="lightbox-count" id="lightboxCount"></p>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -91,5 +247,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="gallery.js"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>
